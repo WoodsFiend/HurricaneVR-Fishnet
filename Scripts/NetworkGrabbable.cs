@@ -17,26 +17,33 @@ public class NetworkGrabbable : NetworkBehaviour
 
     private void Awake()
     {
+        //Always initialize the parent to null for correct positioning
+        transform.SetParent(null);
         rb = GetComponent<Rigidbody>();
         hvrGrabbable = GetComponent<HVRGrabbable>();
 
         hvrGrabbable.Grabbed.AddListener(OnGrabbed);
         hvrGrabbable.Socketed.AddListener(OnSocketed);
-        hvrGrabbable.UnSocketed.AddListener(OnUnSocketed);
     }
 
     private void OnDestroy()
     {
         hvrGrabbable.Grabbed.RemoveListener(OnGrabbed);
         hvrGrabbable.Socketed.RemoveListener(OnSocketed);
-        hvrGrabbable.UnSocketed.RemoveListener(OnUnSocketed);
     }
 
     //------------------------------------- HVR Event Listeners -----------------------------------------
     private void OnGrabbed(HVRGrabberBase grabber, HVRGrabbable grabbable)
     {
         if (grabber.IsSocket) return;
-        RPCSendTakeover();
+        if (socketId > 0)
+        {
+            RPCUnSocket();
+        }
+        else
+        {
+            RPCSendTakeover();
+        }
         if (rb)
         {
             rb.isKinematic = false;
@@ -62,18 +69,13 @@ public class NetworkGrabbable : NetworkBehaviour
             //Debug.Log("Socketed", gameObject);
         }
     }
-    private void OnUnSocketed(HVRSocket socket, HVRGrabbable grabbable)
-    {
-        RPCUnSocket();
-        //Debug.Log("UnSocketed", gameObject);      
-    }
 
     //------------------------------------- Server Functions -----------------------------------------
     public override void OnStartServer()
     {
         ServerManager.Objects.OnPreDestroyClientObjects += OnPreDestroyClientObjects;
+
         if (hvrGrabbable.StartingSocket != null) {
-            var id = 0;
             if (hvrGrabbable.StartingSocket.TryGetComponent<NetworkObject>(out var networkObject))
             {
                 socketId = networkObject.ObjectId;
@@ -107,13 +109,13 @@ public class NetworkGrabbable : NetworkBehaviour
     {
         //They are already the owner do nothing
         if (Owner.ClientId == conn.ClientId) return;
-        if(socketId > -1)
+        /*if(socketId > 0)
         {
             socketId = -1;
             TryUnSocket();
             ObserversUnSocketedGrabbable();
-        }
-        NetworkObject.RemoveOwnership();
+        }*/
+        //NetworkObject.RemoveOwnership();
         NetworkObject.GiveOwnership(conn);
         //Debug.Log("Server Grants Ownership to " + conn.ClientId, gameObject);  
     }
@@ -125,12 +127,13 @@ public class NetworkGrabbable : NetworkBehaviour
         TrySocket(socketId);
         ObserversSocketedGrabbable(socketId);
     }
-    [ServerRpc(RequireOwnership = true)]
-    public void RPCUnSocket()
+    [ServerRpc(RequireOwnership = false)]
+    public void RPCUnSocket(NetworkConnection conn = null)
     {
         socketId = -1;
         TryUnSocket();
         ObserversUnSocketedGrabbable();
+        NetworkObject.GiveOwnership(conn);
         //Socketing can remove rigidbodies, we need to try and get it again
         if (rb == null)
         {
@@ -149,7 +152,7 @@ public class NetworkGrabbable : NetworkBehaviour
         //The server has become the owner
         if (!Owner.IsValid)
         {
-            if (socketId > - 1)
+            if (socketId > 0)
             {
                 rb.isKinematic = true;
                 transform.localPosition = Vector3.zero;
@@ -170,7 +173,17 @@ public class NetworkGrabbable : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-        if (socketId > -1)
+
+        if (Owner.IsLocalClient)
+        {
+            if (hvrGrabbable.StartingSocket)
+            {
+                isSocketed = true;
+                hvrGrabbable.StartingSocket.TryGrab(hvrGrabbable,true,true);
+            }
+            return;
+        }
+        if (socketId > 0)
         {
             TrySocket(socketId, true);
         }
@@ -214,7 +227,7 @@ public class NetworkGrabbable : NetworkBehaviour
                             }
                         }
                         socket.TryGrab(hvrGrabbable, true, ignoreGrabSound);
-                        if(rb != null) rb.isKinematic = true;
+                        if (rb != null) rb.isKinematic = true;
                         //Debug.Log("Socketed on client", gameObject);
                         break;
                     }
@@ -225,7 +238,7 @@ public class NetworkGrabbable : NetworkBehaviour
         isSocketed = true;
     }
 
-    [ObserversRpc(ExcludeOwner = true)]
+    [ObserversRpc(ExcludeOwner = false)]
     public void ObserversUnSocketedGrabbable()
     {
         TryUnSocket();
@@ -239,6 +252,7 @@ public class NetworkGrabbable : NetworkBehaviour
         {
             rb = GetComponent<Rigidbody>();
         }
+
         if (hvrGrabbable.IsSocketed)
         {
             //Debug.Log("Unsocketed on client");

@@ -5,6 +5,8 @@ This project is intended to have a dedicated server and has not been fully teste
 
 Tested:
 - Unity 2022.3.11f1
+- Fishnet Version: 3.11.7R
+- Hurricane VR Version: 2.9.1i
 - Windows/Linux Server build
 - Quest 3 client build
 

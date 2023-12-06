@@ -4719,7 +4719,7 @@ MonoBehaviour:
   OneHandJointSettings: {fileID: 0}
   TwoHandJointSettings: {fileID: 0}
   StartingSocket: {fileID: 2779031648981036214}
-  LinkStartingSocket: 1
+  LinkStartingSocket: 0
   ShowBoundingBox: 0
   DrawCenterOfMass: 0
   GrabPoints: []
@@ -48238,8 +48238,8 @@ MonoBehaviour:
   - {fileID: 5276702846744727384}
   - {fileID: 9098841674385029494}
   SerializedTransformProperties:
-    Position: {x: 0.024235606, y: 1.031, z: -0.744}
-    Rotation: {x: -0.49999934, y: 0.49999908, z: -0.50000095, w: 0.50000066}
+    Position: {x: -0.8737644, y: 1.0310001, z: 6.953}
+    Rotation: {x: -0.4999993, y: 0.4999991, z: -0.5000009, w: 0.5000007}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
