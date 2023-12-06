@@ -1970,6 +1970,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 124544909}
   _networkObjectCache: {fileID: 124544909}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &124544908
 MonoBehaviour:
@@ -3453,6 +3454,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 209636196}
   _networkObjectCache: {fileID: 209636196}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &209636195
 MonoBehaviour:
@@ -3708,6 +3710,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 226045846}
   _networkObjectCache: {fileID: 226045846}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &226045845
 MonoBehaviour:
@@ -4609,6 +4612,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 273578307}
   _networkObjectCache: {fileID: 273578307}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &273578310
 MonoBehaviour:
@@ -5833,6 +5837,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 303733738}
   _networkObjectCache: {fileID: 303733738}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &303733737
 MonoBehaviour:
@@ -6250,6 +6255,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 316148460}
   _networkObjectCache: {fileID: 316148460}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &316148459
 MonoBehaviour:
@@ -6777,6 +6783,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 341690458}
   _networkObjectCache: {fileID: 341690458}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &341690457
 MonoBehaviour:
@@ -8421,6 +8428,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 412087889}
   _networkObjectCache: {fileID: 412087889}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &412087888
 MonoBehaviour:
@@ -8695,6 +8703,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 428838006}
   _networkObjectCache: {fileID: 428838006}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &428838005
 MonoBehaviour:
@@ -9670,6 +9679,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 460832474}
   _networkObjectCache: {fileID: 460832474}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &460832473
 MonoBehaviour:
@@ -9976,6 +9986,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 471183833}
   _networkObjectCache: {fileID: 471183833}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &471183832
 MonoBehaviour:
@@ -10118,6 +10129,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 474136293}
   _networkObjectCache: {fileID: 474136293}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &474136292
 MonoBehaviour:
@@ -10682,6 +10694,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 510040183}
   _networkObjectCache: {fileID: 510040183}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &510040182
 MonoBehaviour:
@@ -11007,6 +11020,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &546303965
 MonoBehaviour:
@@ -11631,6 +11645,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 898603361}
   _networkObjectCache: {fileID: 898603361}
+  initializeUnparented: 0
   socketId: -1
 --- !u!1 &583697085
 GameObject:
@@ -12205,6 +12220,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 607439098}
   _networkObjectCache: {fileID: 607439098}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &607439097
 MonoBehaviour:
@@ -12509,6 +12525,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 621117251}
   _networkObjectCache: {fileID: 621117251}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &621117250
 MonoBehaviour:
@@ -12643,6 +12660,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 633207130}
   _networkObjectCache: {fileID: 633207130}
+  initializeUnparented: 0
   socketId: -1
 --- !u!114 &633207129
 MonoBehaviour:
@@ -13059,6 +13077,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 657670131}
   _networkObjectCache: {fileID: 657670131}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &657670130
 MonoBehaviour:
@@ -13377,6 +13396,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 666408750}
   _networkObjectCache: {fileID: 666408750}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &666408749
 MonoBehaviour:
@@ -13514,6 +13534,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 670468525}
   _networkObjectCache: {fileID: 670468525}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &670468524
 MonoBehaviour:
@@ -13821,6 +13842,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 683512391}
   _networkObjectCache: {fileID: 683512391}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &683512390
 MonoBehaviour:
@@ -14072,6 +14094,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 691904339}
   _networkObjectCache: {fileID: 691904339}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &691904338
 MonoBehaviour:
@@ -15415,6 +15438,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 790158212}
   _networkObjectCache: {fileID: 790158212}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &790158211
 MonoBehaviour:
@@ -15649,6 +15673,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 803234402}
   _networkObjectCache: {fileID: 803234402}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &803234401
 MonoBehaviour:
@@ -15847,6 +15872,7 @@ MonoBehaviour:
   _componentIndexCache: 5
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &809203710
 MonoBehaviour:
@@ -16133,6 +16159,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 820718408}
   _networkObjectCache: {fileID: 820718408}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &820718407
 MonoBehaviour:
@@ -16443,6 +16470,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 830252420}
   _networkObjectCache: {fileID: 830252420}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &830252419
 MonoBehaviour:
@@ -16681,6 +16709,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 860102631}
   _networkObjectCache: {fileID: 860102631}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &860102630
 MonoBehaviour:
@@ -16968,6 +16997,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 872570252}
   _networkObjectCache: {fileID: 872570252}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &872570251
 MonoBehaviour:
@@ -18344,6 +18374,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 904888690}
   _networkObjectCache: {fileID: 904888690}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &904888689
 MonoBehaviour:
@@ -18611,6 +18642,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 927725351}
   _networkObjectCache: {fileID: 927725351}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &927725350
 MonoBehaviour:
@@ -18711,6 +18743,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 930846316}
   _networkObjectCache: {fileID: 930846316}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &930846315
 MonoBehaviour:
@@ -19104,6 +19137,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 948394252}
   _networkObjectCache: {fileID: 948394252}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &948394251
 MonoBehaviour:
@@ -19282,6 +19316,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 953506882}
   _networkObjectCache: {fileID: 953506882}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &953506881
 MonoBehaviour:
@@ -20123,6 +20158,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 986553542}
   _networkObjectCache: {fileID: 986553542}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &986553541
 MonoBehaviour:
@@ -20224,6 +20260,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 988576571}
   _networkObjectCache: {fileID: 988576571}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &988576570
 MonoBehaviour:
@@ -20394,6 +20431,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 990572300}
   _networkObjectCache: {fileID: 990572300}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &990572299
 MonoBehaviour:
@@ -20708,6 +20746,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 998649211}
   _networkObjectCache: {fileID: 998649211}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &998649210
 MonoBehaviour:
@@ -21180,6 +21219,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1038213791}
   _networkObjectCache: {fileID: 1038213791}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1038213790
 MonoBehaviour:
@@ -21692,6 +21732,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1048680488}
   _networkObjectCache: {fileID: 1048680488}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1048680487
 MonoBehaviour:
@@ -22230,6 +22271,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1088966971}
   _networkObjectCache: {fileID: 1088966971}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1088966970
 MonoBehaviour:
@@ -22369,6 +22411,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1092148714}
   _networkObjectCache: {fileID: 1092148714}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1092148713
 MonoBehaviour:
@@ -22655,6 +22698,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1098066774}
   _networkObjectCache: {fileID: 1098066774}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1098066773
 MonoBehaviour:
@@ -23061,6 +23105,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1116288671}
   _networkObjectCache: {fileID: 1116288671}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1116288670
 MonoBehaviour:
@@ -23493,6 +23538,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1141274684}
   _networkObjectCache: {fileID: 1141274684}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1141274683
 MonoBehaviour:
@@ -23671,6 +23717,7 @@ MonoBehaviour:
   _componentIndexCache: 3
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1143784866
 MonoBehaviour:
@@ -24175,6 +24222,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1165446366}
   _networkObjectCache: {fileID: 1165446366}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1165446365
 MonoBehaviour:
@@ -24727,6 +24775,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1171666905}
   _networkObjectCache: {fileID: 1171666905}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1171666904
 MonoBehaviour:
@@ -24943,6 +24992,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1175404351}
   _networkObjectCache: {fileID: 1175404351}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1175404350
 MonoBehaviour:
@@ -25292,6 +25342,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1182048836}
   _networkObjectCache: {fileID: 1182048836}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1182048835
 MonoBehaviour:
@@ -25512,6 +25563,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1183134414}
   _networkObjectCache: {fileID: 1183134414}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1183134413
 MonoBehaviour:
@@ -25737,6 +25789,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1194670498}
   _networkObjectCache: {fileID: 1194670498}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1194670497
 MonoBehaviour:
@@ -26294,6 +26347,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1218085450}
   _networkObjectCache: {fileID: 1218085450}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1218085449
 MonoBehaviour:
@@ -26858,6 +26912,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1246395037}
   _networkObjectCache: {fileID: 1246395037}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1246395036
 MonoBehaviour:
@@ -27029,6 +27084,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1247314260}
   _networkObjectCache: {fileID: 1247314260}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1247314259
 MonoBehaviour:
@@ -27854,6 +27910,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1274543636}
   _networkObjectCache: {fileID: 1274543636}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1274543635
 MonoBehaviour:
@@ -28381,6 +28438,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1295276782}
   _networkObjectCache: {fileID: 1295276782}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1295276781
 MonoBehaviour:
@@ -28482,6 +28540,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1296191856}
   _networkObjectCache: {fileID: 1296191856}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1296191855
 MonoBehaviour:
@@ -29195,6 +29254,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1323054842}
   _networkObjectCache: {fileID: 1323054842}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1323054841
 MonoBehaviour:
@@ -29296,6 +29356,7 @@ MonoBehaviour:
   _componentIndexCache: 2
   _addedNetworkObject: {fileID: 898603361}
   _networkObjectCache: {fileID: 898603361}
+  initializeUnparented: 0
   socketId: -1
 --- !u!1 &1326204804
 GameObject:
@@ -29604,6 +29665,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1335331507}
   _networkObjectCache: {fileID: 1335331507}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1335331506
 MonoBehaviour:
@@ -30151,6 +30213,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1359587880}
   _networkObjectCache: {fileID: 1359587880}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1359587879
 MonoBehaviour:
@@ -30383,6 +30446,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1361081046}
   _networkObjectCache: {fileID: 1361081046}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1361081045
 MonoBehaviour:
@@ -30852,6 +30916,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1369300453}
   _networkObjectCache: {fileID: 1369300453}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1369300452
 MonoBehaviour:
@@ -31094,6 +31159,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1386559481}
   _networkObjectCache: {fileID: 1386559481}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1386559480
 MonoBehaviour:
@@ -31400,6 +31466,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1404662871}
   _networkObjectCache: {fileID: 1404662871}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1404662870
 MonoBehaviour:
@@ -31655,6 +31722,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1410596512}
   _networkObjectCache: {fileID: 1410596512}
+  initializeUnparented: 0
   socketId: -1
 --- !u!114 &1410596511
 MonoBehaviour:
@@ -31755,6 +31823,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1414100010}
   _networkObjectCache: {fileID: 1414100010}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1414100009
 MonoBehaviour:
@@ -32416,6 +32485,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1438305357}
   _networkObjectCache: {fileID: 1438305357}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1438305356
 MonoBehaviour:
@@ -32516,6 +32586,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1454723577}
   _networkObjectCache: {fileID: 1454723577}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1454723576
 MonoBehaviour:
@@ -32627,6 +32698,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1457464407}
   _networkObjectCache: {fileID: 1457464407}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1457464406
 MonoBehaviour:
@@ -32925,6 +32997,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1470445263}
   _networkObjectCache: {fileID: 1470445263}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1470445262
 MonoBehaviour:
@@ -33757,6 +33830,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1509617123}
   _networkObjectCache: {fileID: 1509617123}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1509617122
 MonoBehaviour:
@@ -34222,6 +34296,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1539257092}
   _networkObjectCache: {fileID: 1539257092}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1539257091
 MonoBehaviour:
@@ -34406,6 +34481,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1541476306}
   _networkObjectCache: {fileID: 1541476306}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1541476305
 MonoBehaviour:
@@ -34621,6 +34697,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1559398727}
   _networkObjectCache: {fileID: 1559398727}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1559398726
 MonoBehaviour:
@@ -35179,6 +35256,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1592107438}
   _networkObjectCache: {fileID: 1592107438}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1592107437
 MonoBehaviour:
@@ -35501,6 +35579,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1596024040}
   _networkObjectCache: {fileID: 1596024040}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1596024039
 MonoBehaviour:
@@ -36058,6 +36137,7 @@ MonoBehaviour:
   _componentIndexCache: 2
   _addedNetworkObject: {fileID: 2052107564}
   _networkObjectCache: {fileID: 2052107564}
+  initializeUnparented: 0
   socketId: -1
 --- !u!1 &1620121590
 GameObject:
@@ -36660,6 +36740,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1640139473}
   _networkObjectCache: {fileID: 1640139473}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1640139472
 MonoBehaviour:
@@ -36914,6 +36995,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1652035450}
   _networkObjectCache: {fileID: 1652035450}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1652035449
 MonoBehaviour:
@@ -37222,6 +37304,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1661759925}
   _networkObjectCache: {fileID: 1661759925}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1661759924
 MonoBehaviour:
@@ -37679,6 +37762,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1676408047}
   _networkObjectCache: {fileID: 1676408047}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1676408046
 MonoBehaviour:
@@ -38251,6 +38335,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1698206273}
   _networkObjectCache: {fileID: 1698206273}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1698206272
 MonoBehaviour:
@@ -38390,6 +38475,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1704035484}
   _networkObjectCache: {fileID: 1704035484}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1704035483
 MonoBehaviour:
@@ -38559,6 +38645,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1706546698}
   _networkObjectCache: {fileID: 1706546698}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1706546697
 MonoBehaviour:
@@ -38791,6 +38878,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1708553730}
   _networkObjectCache: {fileID: 1708553730}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1708553729
 MonoBehaviour:
@@ -39005,6 +39093,7 @@ MonoBehaviour:
   _componentIndexCache: 9
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1714863575
 MonoBehaviour:
@@ -39541,6 +39630,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1732202150}
   _networkObjectCache: {fileID: 1732202150}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1732202149
 MonoBehaviour:
@@ -39681,6 +39771,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1734162774}
   _networkObjectCache: {fileID: 1734162774}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1734162773
 MonoBehaviour:
@@ -40597,6 +40688,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1775956516}
   _networkObjectCache: {fileID: 1775956516}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1775956515
 MonoBehaviour:
@@ -40876,6 +40968,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1785759924}
   _networkObjectCache: {fileID: 1785759924}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1785759923
 MonoBehaviour:
@@ -41142,6 +41235,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1788896240}
   _networkObjectCache: {fileID: 1788896240}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1788896239
 MonoBehaviour:
@@ -41893,6 +41987,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1808997057}
   _networkObjectCache: {fileID: 1808997057}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1808997056
 MonoBehaviour:
@@ -42141,6 +42236,7 @@ MonoBehaviour:
   _componentIndexCache: 7
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1830087493
 MonoBehaviour:
@@ -42450,6 +42546,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1835443508}
   _networkObjectCache: {fileID: 1835443508}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1835443507
 MonoBehaviour:
@@ -42715,6 +42812,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 1844049330}
   _networkObjectCache: {fileID: 1844049330}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1844049329
 MonoBehaviour:
@@ -43095,6 +43193,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1872060373}
   _networkObjectCache: {fileID: 1872060373}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1872060372
 MonoBehaviour:
@@ -43497,6 +43596,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1883018140}
   _networkObjectCache: {fileID: 1883018140}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1883018139
 MonoBehaviour:
@@ -44038,6 +44138,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1896173205}
   _networkObjectCache: {fileID: 1896173205}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1896173204
 MonoBehaviour:
@@ -44171,6 +44272,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1916420413}
   _networkObjectCache: {fileID: 1916420413}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1916420412
 MonoBehaviour:
@@ -44636,6 +44738,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1942120434}
   _networkObjectCache: {fileID: 1942120434}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1942120433
 MonoBehaviour:
@@ -45228,6 +45331,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2052107564}
   _networkObjectCache: {fileID: 2052107564}
+  initializeUnparented: 0
   socketId: -1
 --- !u!4 &1969631737 stripped
 Transform:
@@ -45538,6 +45642,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 1991929176}
   _networkObjectCache: {fileID: 1991929176}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &1991929175
 MonoBehaviour:
@@ -45641,6 +45746,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2001485656}
   _networkObjectCache: {fileID: 2001485656}
+  initializeUnparented: 0
   socketId: -1
 --- !u!114 &2001485655
 MonoBehaviour:
@@ -45964,6 +46070,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2016942897}
   _networkObjectCache: {fileID: 2016942897}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2016942896
 MonoBehaviour:
@@ -46464,6 +46571,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2026970044}
   _networkObjectCache: {fileID: 2026970044}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2026970043
 MonoBehaviour:
@@ -46564,6 +46672,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2036685197}
   _networkObjectCache: {fileID: 2036685197}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2036685196
 MonoBehaviour:
@@ -47325,6 +47434,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2054820886}
   _networkObjectCache: {fileID: 2054820886}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2054820885
 MonoBehaviour:
@@ -47621,6 +47731,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2061562875}
   _networkObjectCache: {fileID: 2061562875}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2061562874
 MonoBehaviour:
@@ -47875,6 +47986,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2064583594}
   _networkObjectCache: {fileID: 2064583594}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2064583593
 MonoBehaviour:
@@ -47985,6 +48097,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2069473433}
   _networkObjectCache: {fileID: 2069473433}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2069473432
 MonoBehaviour:
@@ -48168,6 +48281,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2071075796}
   _networkObjectCache: {fileID: 2071075796}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2071075795
 MonoBehaviour:
@@ -48643,6 +48757,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2088694371}
   _networkObjectCache: {fileID: 2088694371}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2088694370
 MonoBehaviour:
@@ -48777,6 +48892,7 @@ MonoBehaviour:
   _componentIndexCache: 11
   _addedNetworkObject: {fileID: 1684111697}
   _networkObjectCache: {fileID: 1684111697}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2093717786
 MonoBehaviour:
@@ -48913,6 +49029,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2094718055}
   _networkObjectCache: {fileID: 2094718055}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2094718054
 MonoBehaviour:
@@ -49211,6 +49328,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2100634105}
   _networkObjectCache: {fileID: 2100634105}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2100634104
 MonoBehaviour:
@@ -49444,6 +49562,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2101182972}
   _networkObjectCache: {fileID: 2101182972}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2101182971
 MonoBehaviour:
@@ -49616,6 +49735,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2102337963}
   _networkObjectCache: {fileID: 2102337963}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2102337962
 MonoBehaviour:
@@ -49926,6 +50046,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2113468010}
   _networkObjectCache: {fileID: 2113468010}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2113468009
 MonoBehaviour:
@@ -50066,6 +50187,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2116395902}
   _networkObjectCache: {fileID: 2116395902}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2116395901
 MonoBehaviour:
@@ -50492,6 +50614,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2125486378}
   _networkObjectCache: {fileID: 2125486378}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2125486377
 MonoBehaviour:
@@ -50663,6 +50786,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2127510987}
   _networkObjectCache: {fileID: 2127510987}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2127510986
 MonoBehaviour:
@@ -50802,6 +50926,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2129317967}
   _networkObjectCache: {fileID: 2129317967}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2129317966
 MonoBehaviour:
@@ -51134,6 +51259,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 2136236088}
   _networkObjectCache: {fileID: 2136236088}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &2136236087
 MonoBehaviour:
@@ -71740,6 +71866,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 5488048311500247358}
   _networkObjectCache: {fileID: 5488048311500247358}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &5488048311500247357
 MonoBehaviour:
@@ -75745,6 +75872,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 8170215885849689962}
   _networkObjectCache: {fileID: 8170215885849689962}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &8170215885849689961
 MonoBehaviour:
@@ -75961,6 +76089,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 8533456948070840884}
   _networkObjectCache: {fileID: 8533456948070840884}
+  initializeUnparented: 1
   socketId: -1
 --- !u!114 &8533456948070840883
 MonoBehaviour:
