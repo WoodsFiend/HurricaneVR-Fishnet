@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class NetworkGrabbable : NetworkBehaviour
 {
+    [SerializeField]
+    private bool initializeUnparented = true;
+
     private HVRGrabbable hvrGrabbable;
     private Rigidbody rb;
 
@@ -18,7 +21,10 @@ public class NetworkGrabbable : NetworkBehaviour
     private void Awake()
     {
         //Always initialize the parent to null for correct positioning
-        transform.SetParent(null);
+        if (initializeUnparented)
+        {
+            transform.SetParent(null);
+        }
         rb = GetComponent<Rigidbody>();
         hvrGrabbable = GetComponent<HVRGrabbable>();
 
