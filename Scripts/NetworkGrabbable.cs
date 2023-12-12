@@ -45,6 +45,8 @@ public class NetworkGrabbable : NetworkBehaviour
         if (socketId > 0)
         {
             RPCUnSocket();
+            //Debug.Log("Client tells server to unsocket", gameObject);
+            isSocketed = false;
         }
         else
         {
@@ -72,7 +74,8 @@ public class NetworkGrabbable : NetworkBehaviour
             }
 
             RPCSocket(id);
-            //Debug.Log("Socketed", gameObject);
+
+            //Debug.Log("Client tells server to socket", gameObject);
         }
     }
 
@@ -115,13 +118,6 @@ public class NetworkGrabbable : NetworkBehaviour
     {
         //They are already the owner do nothing
         if (Owner.ClientId == conn.ClientId) return;
-        /*if(socketId > 0)
-        {
-            socketId = -1;
-            TryUnSocket();
-            ObserversUnSocketedGrabbable();
-        }*/
-        //NetworkObject.RemoveOwnership();
         NetworkObject.GiveOwnership(conn);
         //Debug.Log("Server Grants Ownership to " + conn.ClientId, gameObject);  
     }
@@ -130,16 +126,14 @@ public class NetworkGrabbable : NetworkBehaviour
     public void RPCSocket(int _socketId)
     {
         socketId = _socketId;
-        TrySocket(socketId);
         ObserversSocketedGrabbable(socketId);
     }
     [ServerRpc(RequireOwnership = false)]
     public void RPCUnSocket(NetworkConnection conn = null)
     {
         socketId = -1;
-        TryUnSocket();
-        ObserversUnSocketedGrabbable();
         NetworkObject.GiveOwnership(conn);
+        ObserversUnSocketedGrabbable();
         //Socketing can remove rigidbodies, we need to try and get it again
         if (rb == null)
         {
@@ -161,8 +155,8 @@ public class NetworkGrabbable : NetworkBehaviour
             if (socketId > 0)
             {
                 rb.isKinematic = true;
-                transform.localPosition = Vector3.zero;
-                transform.localRotation = Quaternion.identity;
+                //transform.localPosition = Vector3.zero;
+                //transform.localRotation = Quaternion.identity;
             }
             else
             {
@@ -193,7 +187,7 @@ public class NetworkGrabbable : NetworkBehaviour
         {
             TrySocket(socketId, true);
         }
-        else
+        else if(hvrGrabbable.IsSocketed)
         {
             TryUnSocket();
             if (hvrGrabbable.StartingSocket != null && !hvrGrabbable.LinkStartingSocket)
@@ -203,7 +197,7 @@ public class NetworkGrabbable : NetworkBehaviour
             }
         }
     }
-    [ObserversRpc(ExcludeOwner = true)]
+    [ObserversRpc(ExcludeOwner = true, ExcludeServer = false)]
     public void ObserversSocketedGrabbable(int _socketId)
     {
         TrySocket(_socketId);
@@ -211,40 +205,42 @@ public class NetworkGrabbable : NetworkBehaviour
 
     private void TrySocket(int _socketId, bool ignoreGrabSound = false)
     {
-        //Find the network object socket if this isn't socketed
-        if (!hvrGrabbable.IsSocketed)
+        if(_socketId <= 0)
         {
-            var netObjects = FindObjectsOfType<NetworkObject>(true);
-            foreach (var netObj in netObjects)
+            Debug.LogWarning("Tried to socket invalid id", gameObject);
+            return;
+        }
+        //Find the network object socket if this isn't socketed
+        var netObjects = FindObjectsOfType<NetworkObject>(true);
+        foreach (var netObj in netObjects)
+        {
+            if (netObj.ObjectId == _socketId)
             {
-                if (netObj.ObjectId == _socketId)
+                if (netObj.TryGetComponent<HVRSocket>(out var socket))
                 {
-                    if (netObj.TryGetComponent<HVRSocket>(out var socket))
+                    if (rb != null)
                     {
-                        if (rb != null)
+                        if (Owner.IsLocalClient)
                         {
-                            if (Owner.IsLocalClient)
-                            {
-                                rb.isKinematic = false;
-                            }
-                            else
-                            {
-                                rb.isKinematic = true;
-                            }
+                            rb.isKinematic = false;
                         }
-                        socket.TryGrab(hvrGrabbable, true, ignoreGrabSound);
-                        if (rb != null) rb.isKinematic = true;
-                        //Debug.Log("Socketed on client", gameObject);
-                        break;
+                        else
+                        {
+                            rb.isKinematic = true;
+                        }
                     }
+                    socket.TryGrab(hvrGrabbable, true, ignoreGrabSound);
+                    if (rb != null) rb.isKinematic = true;
+                    //Debug.Log("Socketed on client", gameObject);
+                    break;
                 }
             }
-        }
+        }       
         //Parent this to the socket
         isSocketed = true;
     }
 
-    [ObserversRpc(ExcludeOwner = false)]
+    [ObserversRpc(ExcludeOwner = true, ExcludeServer = false)]
     public void ObserversUnSocketedGrabbable()
     {
         TryUnSocket();
@@ -259,11 +255,13 @@ public class NetworkGrabbable : NetworkBehaviour
             rb = GetComponent<Rigidbody>();
         }
 
-        if (hvrGrabbable.IsSocketed)
+        if (!hvrGrabbable.IsHandGrabbed)
         {
-            //Debug.Log("Unsocketed on client");
-            hvrGrabbable.Socket.ForceRelease();
+            hvrGrabbable.ForceRelease();
+            //Debug.Log("Unsocketed on client", gameObject);
         }
+        //For some reason force release is not always letting go of objects
+        hvrGrabbable.transform.SetParent(null);
     }
 
     public override void OnOwnershipClient(NetworkConnection prevOwner)
