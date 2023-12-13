@@ -32,11 +32,24 @@ public class CustomHVRDamageHandler : HVRDamageHandler
 
     public override void HandleDamageProvider(HVRDamageProvider damageProvider, Vector3 hitPoint, Vector3 direction)
     {
-        if (networkDamageHandler.isServer)
+        if (networkDamageHandler.IsServer)
         {
             base.HandleDamageProvider(damageProvider, hitPoint, direction);
             ServerDamageTaken.Invoke(damageProvider.Damage, hitPoint, direction);
         }
     }
 
+    public void HandleDamageProvider(HVRDamageProvider damageProvider, Vector3 hitPoint, Vector3 direction, float damageMultiplier)
+    {
+        if (networkDamageHandler.IsServer)
+        {
+            //base.HandleDamageProvider(damageProvider, hitPoint, direction);
+            TakeDamage(damageProvider.Damage * damageMultiplier);
+            if (Rigidbody)
+            {
+                Rigidbody.AddForceAtPosition(direction.normalized * damageProvider.Force, hitPoint, ForceMode.Impulse);
+            }
+            ServerDamageTaken.Invoke(damageProvider.Damage * damageMultiplier, hitPoint, direction);
+        }
+    }
 }
