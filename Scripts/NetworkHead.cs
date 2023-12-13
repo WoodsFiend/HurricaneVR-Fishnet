@@ -11,11 +11,20 @@ public class NetworkHead : NetworkBehaviour
         base.OnStartClient();
         if (!Owner.IsLocalClient)
         {
-            //Show the head on remote players for FinalIK
-            if (headToScale)
-            {
-                headToScale.localScale = Vector3.one;
-            }
+            ScaleHead();
+        }
+    }
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+        ScaleHead();
+    }
+    private void ScaleHead()
+    {
+        //Show the head on remote players for FinalIK
+        if (headToScale)
+        {
+            headToScale.localScale = Vector3.one;
         }
     }
 }

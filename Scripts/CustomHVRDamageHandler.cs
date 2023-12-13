@@ -4,8 +4,9 @@ using UnityEngine.Events;
 
 public class CustomHVRDamageHandler : HVRDamageHandler
 {
-    public UnityEvent<float, Vector3, Vector3> DamageTaken = new UnityEvent<float, Vector3, Vector3>();
-    private NetworkDamageHandler networkDamageHandler;
+    public UnityEvent<float, Vector3, Vector3> ServerDamageTaken = new UnityEvent<float, Vector3, Vector3>();
+    public UnityEvent<float, Vector3, Vector3> ClientDamageTaken = new UnityEvent<float, Vector3, Vector3>();
+    protected NetworkDamageHandler networkDamageHandler;
 
     private void Awake()
     {
@@ -26,14 +27,15 @@ public class CustomHVRDamageHandler : HVRDamageHandler
     {
         //Debug.Log("Network Damage");
         base.TakeDamage(damage);
+        ClientDamageTaken.Invoke(damage, hitPoint, direction);
     }
 
     public override void HandleDamageProvider(HVRDamageProvider damageProvider, Vector3 hitPoint, Vector3 direction)
     {
-        if (networkDamageHandler.IsServer)
+        if (networkDamageHandler.isServer)
         {
             base.HandleDamageProvider(damageProvider, hitPoint, direction);
-            DamageTaken.Invoke(damageProvider.Damage, hitPoint, direction);
+            ServerDamageTaken.Invoke(damageProvider.Damage, hitPoint, direction);
         }
     }
 
