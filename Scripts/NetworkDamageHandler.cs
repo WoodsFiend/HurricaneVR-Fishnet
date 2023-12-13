@@ -10,11 +10,11 @@ public class NetworkDamageHandler : NetworkBehaviour
     private void Awake()
     {
         hVRDamageHandler = GetComponent<CustomHVRDamageHandler>();
-        hVRDamageHandler.DamageTaken.AddListener(OnDamageTaken);
+        hVRDamageHandler.ServerDamageTaken.AddListener(OnDamageTaken);
     }
     private void OnDestroy()
     {
-        if (hVRDamageHandler) hVRDamageHandler.DamageTaken.RemoveListener(OnDamageTaken);
+        if (hVRDamageHandler) hVRDamageHandler.ServerDamageTaken.RemoveListener(OnDamageTaken);
     }
 
     private void OnDamageTaken(float damage, Vector3 hitPoint, Vector3 direction)
