@@ -30,12 +30,14 @@ public class NetworkGrabbable : NetworkBehaviour
 
         hvrGrabbable.Grabbed.AddListener(OnGrabbed);
         hvrGrabbable.Socketed.AddListener(OnSocketed);
+        hvrGrabbable.UnSocketed.AddListener(OnUnSocketed);
     }
 
     private void OnDestroy()
     {
         hvrGrabbable.Grabbed.RemoveListener(OnGrabbed);
         hvrGrabbable.Socketed.RemoveListener(OnSocketed);
+        hvrGrabbable.UnSocketed.RemoveListener(OnUnSocketed);
     }
 
     //------------------------------------- HVR Event Listeners -----------------------------------------
@@ -78,7 +80,15 @@ public class NetworkGrabbable : NetworkBehaviour
             //Debug.Log("Client tells server to socket", gameObject);
         }
     }
-
+    private void OnUnSocketed(HVRSocket socket, HVRGrabbable grabbable)
+    {
+        if (socketId > 0)
+        {
+            RPCUnSocket();
+            //Debug.Log("Client tells server to unsocket", gameObject);
+            isSocketed = false;
+        }
+    }
     //------------------------------------- Server Functions -----------------------------------------
     public override void OnStartServer()
     {
