@@ -141,9 +141,13 @@ public class NetworkGrabbable : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void RPCUnSocket(NetworkConnection conn = null)
     {
-        socketId = -1;
-        NetworkObject.GiveOwnership(conn);
-        ObserversUnSocketedGrabbable();
+        if (socketId > 0)
+        {
+            socketId = -1;
+            //Take ownership if they are not already the owner
+            if (Owner.ClientId != conn.ClientId) NetworkObject.GiveOwnership(conn);
+            ObserversUnSocketedGrabbable();
+        }
         //Socketing can remove rigidbodies, we need to try and get it again
         if (rb == null)
         {
@@ -277,6 +281,8 @@ public class NetworkGrabbable : NetworkBehaviour
     public override void OnOwnershipClient(NetworkConnection prevOwner)
     {
         base.OnOwnershipClient(prevOwner);
+        //Maybe this is firing when not actually changing the owner
+        if (prevOwner == Owner) return;
         if (rb)
         {
             if (Owner.IsLocalClient && !isSocketed)
