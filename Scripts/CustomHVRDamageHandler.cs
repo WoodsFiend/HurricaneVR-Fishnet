@@ -76,7 +76,7 @@ public class CustomHVRDamageHandler : HVRDamageHandler
         {
             //base.HandleDamageProvider(damageProvider, hitPoint, direction);
             TakeDamage(damageProvider.Damage * damageMultiplier);
-            if (Rigidbody)
+            if (Rigidbody != null)
             {
                 Rigidbody.AddForceAtPosition(direction.normalized * damageProvider.Force, hitPoint, ForceMode.Impulse);
             }
