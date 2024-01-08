@@ -20,7 +20,8 @@ public class CustomHVRGunBase : HVRGunBase
     private int NumberOfPellets = 1;
     [SerializeField]
     private float ShotRadius = 0.05f;
-
+    [SerializeField]
+    private float BurstCooldown = 0.2f;
     protected override void Awake()
     {
         base.Awake();
@@ -34,6 +35,15 @@ public class CustomHVRGunBase : HVRGunBase
     {
         Shoot();
     }
+
+    public override void TriggerPulled()
+    {
+        var isBurstShooting = RoundsFired > 0 && RoundsFired < 3;
+        if (FireType == GunFireType.ThreeRoundBurst && isBurstShooting && Time.time - TimeOfLastShot < BurstCooldown)
+            return;
+        base.TriggerPulled();
+    }
+
 
     protected override void OnFire(Vector3 direction)
     {
