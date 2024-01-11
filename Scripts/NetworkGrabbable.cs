@@ -102,7 +102,11 @@ public class NetworkGrabbable : NetworkBehaviour
                 //If the starting socket is not linked remove it or it can cause issues
                 if (!hvrGrabbable.LinkStartingSocket)
                 {
-                    hvrGrabbable.StartingSocket = null;
+                    //This causes issues on client hosted
+                    if (!Owner.IsHost)
+                    {
+                        hvrGrabbable.StartingSocket = null;
+                    }
                 }
             }
             else
@@ -164,7 +168,7 @@ public class NetworkGrabbable : NetworkBehaviour
         base.OnOwnershipServer(prevOwner);
         if (rb == null) return;
         //The server has become the owner
-        if (!Owner.IsValid)
+        if (!Owner.IsValid || Owner.IsLocalClient)
         {
             if (socketId > 0)
             {
@@ -174,7 +178,8 @@ public class NetworkGrabbable : NetworkBehaviour
             }
             else
             {
-                rb.isKinematic = false;
+                //This has issues when client hosted
+                //rb.isKinematic = false;
             }
         }
         else
@@ -234,7 +239,7 @@ public class NetworkGrabbable : NetworkBehaviour
                 {
                     if (rb != null)
                     {
-                        if (Owner.IsLocalClient)
+                        if ((NetworkManager.IsHost && !Owner.IsValid) || Owner.IsLocalClient)
                         {
                             rb.isKinematic = false;
                         }
@@ -283,9 +288,10 @@ public class NetworkGrabbable : NetworkBehaviour
         base.OnOwnershipClient(prevOwner);
         //Maybe this is firing when not actually changing the owner
         if (prevOwner == Owner) return;
+        
         if (rb)
         {
-            if (Owner.IsLocalClient && !isSocketed)
+            if (((NetworkManager.IsHost && !Owner.IsValid) || Owner.IsLocalClient) && !isSocketed)
             {
                 rb.isKinematic = false;
             }

@@ -89,7 +89,10 @@ public class NetworkGun : NetworkBehaviour
     [ServerRpc(RequireOwnership = true)]
     private void RPCShoot()
     {
-        hVRGunBase.NetworkShoot();
+        if (!Owner.IsHost)
+        {
+            hVRGunBase.NetworkShoot();
+        }
         ObserversShoot();
     }
     [ObserversRpc(ExcludeOwner = true)]

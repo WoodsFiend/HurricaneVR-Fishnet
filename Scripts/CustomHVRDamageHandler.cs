@@ -40,7 +40,7 @@ public class CustomHVRDamageHandler : HVRDamageHandler
 
     private void CheckForRevive()
     {
-        if (Desctructible.Destroyed && Life > 0)
+        if (Desctructible != null && Desctructible.Destroyed && Life > 0)
         {
             var playerdDeathDestructible = Desctructible as PlayerDeathDestructible;
             if (playerdDeathDestructible)

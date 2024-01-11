@@ -27,8 +27,11 @@ public class NetworkDestructible : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
-        isServer = true;
-        Destroy(hVRDestructible);
+        if (LocalConnection == Owner)
+        {
+            isServer = true;
+            Destroy(hVRDestructible);
+        }
     }
     private void OnDestroy()
     {

@@ -32,6 +32,10 @@ public class RemoteComponentsManager : NetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
+        if (Owner.IsLocalClient)
+        {
+            return;
+        }
         // The remote clients should remove all the components and
         // game objects that are included in the lists
         foreach (var comp in remoteRemoveComponents)
