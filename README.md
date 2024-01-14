@@ -17,9 +17,9 @@ Tested:
 1. Build a dedicated server:
     - Add the example scene to the build settings as the first scene
 	- Locally build and run for your target platform (Dedicated Server Windows/Linux)
-	OR
+	- OR
 	- Build and Deploy with [PlayFlow Cloud](https://assetstore.unity.com/packages/tools/network/playflow-cloud-206903). Then assign the IP of the server to the NetworkManager Tugboat.ClientAddress in scene. (requires Linux Dedicated Server)
-- Test in the editor and/or build a client
+    - Test in the editor and/or build a client
 2. Client Hosted:
     - Find the NetworkHudCanvas and change the auto start type to Host
     - Test in the editor and/or build a client
