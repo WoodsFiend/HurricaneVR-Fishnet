@@ -30,12 +30,14 @@ public class NetworkGrabbable : NetworkBehaviour
 
         hvrGrabbable.Grabbed.AddListener(OnGrabbed);
         hvrGrabbable.Socketed.AddListener(OnSocketed);
+        hvrGrabbable.UnSocketed.AddListener(OnUnSocketed);
     }
 
     private void OnDestroy()
     {
         hvrGrabbable.Grabbed.RemoveListener(OnGrabbed);
         hvrGrabbable.Socketed.RemoveListener(OnSocketed);
+        hvrGrabbable.UnSocketed.RemoveListener(OnUnSocketed);
     }
 
     //------------------------------------- HVR Event Listeners -----------------------------------------
@@ -78,7 +80,15 @@ public class NetworkGrabbable : NetworkBehaviour
             //Debug.Log("Client tells server to socket", gameObject);
         }
     }
-
+    private void OnUnSocketed(HVRSocket socket, HVRGrabbable grabbable)
+    {
+        if (socketId > 0)
+        {
+            RPCUnSocket();
+            //Debug.Log("Client tells server to unsocket", gameObject);
+            isSocketed = false;
+        }
+    }
     //------------------------------------- Server Functions -----------------------------------------
     public override void OnStartServer()
     {
@@ -92,7 +102,11 @@ public class NetworkGrabbable : NetworkBehaviour
                 //If the starting socket is not linked remove it or it can cause issues
                 if (!hvrGrabbable.LinkStartingSocket)
                 {
-                    hvrGrabbable.StartingSocket = null;
+                    //This causes issues on client hosted
+                    if (!Owner.IsHost)
+                    {
+                        hvrGrabbable.StartingSocket = null;
+                    }
                 }
             }
             else
@@ -131,9 +145,13 @@ public class NetworkGrabbable : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void RPCUnSocket(NetworkConnection conn = null)
     {
-        socketId = -1;
-        NetworkObject.GiveOwnership(conn);
-        ObserversUnSocketedGrabbable();
+        if (socketId > 0)
+        {
+            socketId = -1;
+            //Take ownership if they are not already the owner
+            if (Owner.ClientId != conn.ClientId) NetworkObject.GiveOwnership(conn);
+            ObserversUnSocketedGrabbable();
+        }
         //Socketing can remove rigidbodies, we need to try and get it again
         if (rb == null)
         {
@@ -150,7 +168,7 @@ public class NetworkGrabbable : NetworkBehaviour
         base.OnOwnershipServer(prevOwner);
         if (rb == null) return;
         //The server has become the owner
-        if (!Owner.IsValid)
+        if (!Owner.IsValid || Owner.IsLocalClient)
         {
             if (socketId > 0)
             {
@@ -160,7 +178,8 @@ public class NetworkGrabbable : NetworkBehaviour
             }
             else
             {
-                rb.isKinematic = false;
+                //This has issues when client hosted
+                //rb.isKinematic = false;
             }
         }
         else
@@ -220,7 +239,7 @@ public class NetworkGrabbable : NetworkBehaviour
                 {
                     if (rb != null)
                     {
-                        if (Owner.IsLocalClient)
+                        if ((NetworkManager.IsHost && !Owner.IsValid) || Owner.IsLocalClient)
                         {
                             rb.isKinematic = false;
                         }
@@ -267,9 +286,12 @@ public class NetworkGrabbable : NetworkBehaviour
     public override void OnOwnershipClient(NetworkConnection prevOwner)
     {
         base.OnOwnershipClient(prevOwner);
+        //Maybe this is firing when not actually changing the owner
+        if (prevOwner == Owner) return;
+        
         if (rb)
         {
-            if (Owner.IsLocalClient && !isSocketed)
+            if (((NetworkManager.IsHost && !Owner.IsValid) || Owner.IsLocalClient) && !isSocketed)
             {
                 rb.isKinematic = false;
             }
