@@ -42,10 +42,10 @@ public class CustomHVRDamageHandler : HVRDamageHandler
     {
         if (Desctructible != null && Desctructible.Destroyed && Life > 0)
         {
-            var playerdDeathDestructible = Desctructible as PlayerDeathDestructible;
-            if (playerdDeathDestructible)
+            var revivableDestructible = Desctructible as RevivableDestructible;
+            if (revivableDestructible)
             {
-                playerdDeathDestructible.Revive();
+                revivableDestructible.Revive();
             }
         }
     }
