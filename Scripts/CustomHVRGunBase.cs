@@ -38,8 +38,7 @@ public class CustomHVRGunBase : HVRGunBase
 
     public override void TriggerPulled()
     {
-        var isBurstShooting = RoundsFired > 0 && RoundsFired < 3;
-        if (FireType == GunFireType.ThreeRoundBurst && isBurstShooting && Time.time - TimeOfLastShot < BurstCooldown)
+        if (FireType == GunFireType.ThreeRoundBurst && Time.time - TimeOfLastShot < BurstCooldown)
             return;
         base.TriggerPulled();
     }
